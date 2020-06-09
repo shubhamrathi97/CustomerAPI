@@ -3,6 +3,8 @@
 These API developed using Flask, Sqlalchemy and Postgres. We are using Gunicorn, Docker-compose for Deployment.
 If using postman, Please import  `CustomerAPI` collection.
 
+API uses the black-listing to prevent the replay of token. Creating black-listing is using local storage but that can be move to REDIS or PERSISTENT DATABASE for production purpose. 
+
 ## Run Manual
 #### Docker-Compose
 * Run the `docker-compose up --build -d`. API Service will be available at port `5000`.
