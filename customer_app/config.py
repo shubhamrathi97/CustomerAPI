@@ -1,1 +1,3 @@
-SQLALCHEMY_DATABASE_URI = 'postgresql://shubham:shubham@localhost:5433/pathology'
+SQLALCHEMY_DATABASE_URI = 'postgresql://shubham:shubham@localhost:5433/customerdb'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
+JWT_SECRET_KEY = "SUPER_DUOER_JWT_SECRET"
