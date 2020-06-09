@@ -1,0 +1,1 @@
+SQLALCHEMY_DATABASE_URI = 'postgresql://shubham:shubham@localhost:5433/pathology'
