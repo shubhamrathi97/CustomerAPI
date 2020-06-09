@@ -2,6 +2,6 @@
 
 set -e
 
-flask db upgrade
+python manage.py db upgrade
 
 gunicorn -c gunicorn.config.py app:app
