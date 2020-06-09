@@ -1,6 +1,8 @@
 from flask import Blueprint, request, jsonify
-from flask_jwt_extended import create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_refresh_token_required, get_jwt_identity, \
+    jwt_required, get_raw_jwt
 
+from customer_app import blacklist
 from customer_app.model import UserModel, db
 
 api_route = Blueprint('main', __name__)
@@ -37,7 +39,7 @@ def register():
 
 # Standard refresh endpoint. A blacklisted refresh token
 # will not be able to access this endpoint
-@api_route.route('/refresh', methods=['POST'])
+@api_route.route('/refresh', methods=['GET'])
 @jwt_refresh_token_required
 def refresh():
     current_user = get_jwt_identity()
@@ -45,3 +47,11 @@ def refresh():
         'access_token': create_access_token(identity=current_user)
     }
     return jsonify(ret), 200
+
+
+@api_route.route('/logout', methods=['GET'])
+@jwt_required
+def logout():
+    jti = get_raw_jwt()['jti']
+    blacklist.add(jti)
+    return jsonify({"msg": "Successfully logged out"}), 200

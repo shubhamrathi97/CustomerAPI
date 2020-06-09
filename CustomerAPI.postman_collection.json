@@ -1,0 +1,298 @@
+{
+  "info": {
+    "_postman_id": "556da572-bba7-4208-957c-13466ace92df",
+    "name": "CustomerAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "AddCustomer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTE3MTE0MTIsIm5iZiI6MTU5MTcxMTQxMiwianRpIjoiOTM3MWVjZDgtN2U3MS00MDNhLThmMDItNzEzODkyYjA3ZDM5IiwiZXhwIjoxNTkxNzEyMzEyLCJpZGVudGl0eSI6InNodWJoYW0yIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.OMZQSzpvlV0Tgkw6CEoqA7KRwFJegFj6e2i2Vbu_3lE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\":\"shubham\",\n\t\"dob\":\"2019-03-05\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/customers/",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "customers",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetCustomer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTE3MDg0MjUsIm5iZiI6MTU5MTcwODQyNSwianRpIjoiYTVjOWM2ZTAtNjQxNi00ODUwLWJiZmUtMTk5MThiMjVhMTNiIiwiZXhwIjoxNTkxNzA5MzI1LCJpZGVudGl0eSI6InNodWJoYW0yIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.7nd4INrpvgQ7Wgrd72JRHih4I1g-FTHyOdA0wf4FORs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/customers/1/",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "customers",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAllCustomers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTE3MTE0MTIsIm5iZiI6MTU5MTcxMTQxMiwianRpIjoiOTM3MWVjZDgtN2U3MS00MDNhLThmMDItNzEzODkyYjA3ZDM5IiwiZXhwIjoxNTkxNzEyMzEyLCJpZGVudGl0eSI6InNodWJoYW0yIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.OMZQSzpvlV0Tgkw6CEoqA7KRwFJegFj6e2i2Vbu_3lE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/customers/?n=10",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "customers",
+            ""
+          ],
+          "query": [
+            {
+              "key": "n",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteCustomer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTE3MDg0MjUsIm5iZiI6MTU5MTcwODQyNSwianRpIjoiYTVjOWM2ZTAtNjQxNi00ODUwLWJiZmUtMTk5MThiMjVhMTNiIiwiZXhwIjoxNTkxNzA5MzI1LCJpZGVudGl0eSI6InNodWJoYW0yIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.7nd4INrpvgQ7Wgrd72JRHih4I1g-FTHyOdA0wf4FORs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/customers/2/",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "customers",
+            "2",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateCustomer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTE3MDg0MjUsIm5iZiI6MTU5MTcwODQyNSwianRpIjoiYTVjOWM2ZTAtNjQxNi00ODUwLWJiZmUtMTk5MThiMjVhMTNiIiwiZXhwIjoxNTkxNzA5MzI1LCJpZGVudGl0eSI6InNodWJoYW0yIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.7nd4INrpvgQ7Wgrd72JRHih4I1g-FTHyOdA0wf4FORs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"dob\":\"2019-04-01\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/customers/1/",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "customers",
+            "1",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "RegisterUser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\":\"shubham2\",\n\t\"password\":\"rathi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/register",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\":\"shubham2\",\n\t\"password\":\"rathi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/login",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTE3MTAzMzksIm5iZiI6MTU5MTcxMDMzOSwianRpIjoiOTYxZjQ0YTAtNmNjYi00NmFlLWIyMGYtM2FlZGM3NmQ4OTE2IiwiZXhwIjoxNTkxNzExMjM5LCJpZGVudGl0eSI6InNodWJoYW0yIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.1hLvv8Z8mtbJcPsl3YyuaGBmMOnnMO6DdE7d6DPtsNM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"username\":\"shubham2\",\n\t\"password\":\"rathi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/logout",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "664dab35-4bf7-4873-9e07-910570a27dea",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "920d289a-571a-4e15-9d6b-c254e46ffa34",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "6dbbd61b-6fd9-4226-aa75-82e08716cd0b",
+      "key": "url",
+      "value": "localhost:5000",
+      "type": "string"
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
